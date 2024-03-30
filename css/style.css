@@ -1,0 +1,431 @@
+/* Estilos generales */
+body,
+html,
+div,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+li,
+p,
+img {
+    font-family: 'Libre Franklin', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden;
+}
+
+/* Estilos del fondo principal */
+.fondo-principal {
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+ height: 100vh;
+margin-top: 0;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 767px) {
+    .fondo-principal {
+        background-attachment: scroll;
+        /* Eliminar el desplazamiento fijo en dispositivos móviles */
+        background-position: center;
+       
+    }
+}
+
+/* Estilos del menú */
+.bienvenida h1 {
+    background: linear-gradient(rgb(255, 255, 255), rgba(148, 148, 148, 0.5), rgba(29, 29, 29, 0.075));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30em;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .bienvenida h1 {
+        font-size: 5em;
+    }
+
+}
+
+/* menu responsive*/
+
+.hamburger{
+	position:fixed;
+  background-color:transparent;
+	left:0;
+	top:0;
+	height:30px;
+	width:30px;
+	padding:20px 20px;
+	-webkit-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0);
+	-webkit-transition:-webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	z-index:601;
+	cursor:pointer;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
+}
+.hamburger.is-active{
+  background-color:none;
+}
+._layer{
+	background:#fff;
+	margin-bottom:4px;
+	border-radius:2px;
+	width:28px;
+	height:4px;
+	opacity:1;
+	-webkit-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0);
+	-webkit-transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+   
+}
+.hamburger:hover .-top{
+	-webkit-transform:translateY(-100%);
+	-ms-transform:translateY(-100%);
+	transform:translateY(-100%);
+}
+.hamburger:hover .-bottom{
+	-webkit-transform:translateY(50%);
+	-ms-transform:translateY(100%);
+	transform:translateY(100%);
+	}
+.hamburger.is-active .-top{
+	-webkit-transform:translateY(200%) rotate(45deg) ;
+	-ms-transform:translateY(200%) rotate(45deg) ;
+	transform:translateY(200%) rotate(45deg) ;
+}
+.hamburger.is-active .-mid{
+	opacity:0;
+}
+.hamburger.is-active .-bottom{
+	-webkit-transform:translateY(-200%) rotate(135deg) ;
+	-ms-transform:translateY(-200%) rotate(135deg) ;
+	transform:translateY(-200%) rotate(135deg) ;
+}
+
+.menuppal.is_active{
+  transform: translate3d(0px, 0px, 0px);
+}
+.menuppal{
+   background-color: rgba(255, 255, 255, 0.95);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    transform: translate3d(0px, -100%, 0px);
+    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+    width: 100%;
+    z-index: 1;
+}
+.menuppal ul{
+  margin:0;padding:0;
+}
+.menuppal ul li { 
+  list-style: none;
+	text-align:center;
+	font-family: Verdadna, Arial, Helvetica;
+	color:white;
+	font-size:1.5rem;
+	line-height:3em;
+	height:3em;
+  color:#369;
+	text-transform:none;
+	font-weight:bold;
+}
+.menuppal ul li a{
+  text-decoration:none;
+  color:#369;
+}
+.menuppal ul li a:hover{
+  text-decoration:none;
+  color:#fff;
+}
+
+
+
+
+/* Estilos para la sección Información general _TIP */
+.div-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Añadido para que los elementos se envuelvan en dispositivos móviles */
+    background-color: #ffffff1e;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+}
+
+.card-info {
+    width: 100%;
+    max-width: 20rem;
+     margin: 0.5rem;
+    
+}
+
+.card-info p {
+    text-align: center;
+    font-size: 1rem;
+    padding: 2rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.card-info h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-top: 0.5rem;
+    
+}
+
+@media screen and (max-width: 31.25rem) {
+    .div-info {
+        margin-top: 0.5rem;
+      padding: 0.5rem;
+       
+    }
+}
+
+
+/* Estilos para el título h1 */
+.container-titulo {
+    text-align: center;
+    color: #ffffffb2;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 3.125rem;
+}
+
+.titulo-entrada {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: entrada 6s forwards;
+}
+
+@-webkit-keyframes entrada {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+@media (max-width: 48rem) {
+    .container-titulo {
+        padding: 0 1.25rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .titulo-entrada {
+        transform: translateY(0%);
+        font-size: 3rem;
+    }
+}
+
+
+/* Estilos para las cards con imágenes */
+.contenedor-imagenes {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-img-section {
+    width: calc(33.33% - 1.25rem);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.233);
+    border-radius: 0.3125rem;
+    overflow: hidden;
+}
+
+.card-img-section img {
+    width: 100%;
+    height: auto;
+}
+
+.card-img-section h3 {
+    text-align: center;
+    margin: 0.625rem;
+    color: white;
+}
+
+.boton-img {
+    display: block;
+    text-align: center;
+    background-color: #f3fb4e;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    margin: 0 1.25rem 1.25rem;
+}
+
+.boton-img:hover {
+    background-color: #f5d729;
+}
+
+@media screen and (max-width: 48rem) {
+    .card-img-section {
+        width: calc(50% - 1.25rem);
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .card-img-section {
+        width: calc(100% - 1.25rem);
+    }
+}
+
+/* Estilos para la sección de locaciones cinematográficas */
+.div-h2-locaciones {
+    text-align: center;
+    color: #ffffffb2;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.875rem;
+    margin: 5rem 0;
+}
+
+.h2-locaciones-entrada {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: entrada 6s forwards;
+}
+
+@-webkit-keyframes entrada {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+@media (max-width: 48rem) {
+    .h2-locaciones-entrada {
+        transform: translateY(0%);
+        font-size: larger;
+    }
+}
+
+
+
+.card-cine-texto {
+    background-color: #ffffff30;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 1%);
+    padding: 1.25rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.card-parrafo {
+    margin-bottom: 1.25rem;
+    color: rgb(255, 255, 255);
+}
+
+.card-imagenes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.card-imagenes img {
+    width: 50%;
+    height: auto;
+    margin: 0 0.625rem;
+}
+
+.card-button {
+    background-color: #f3fb4e;
+    color: #000000;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-button:hover {
+    background-color: #f5d729;
+}
+
+.contenedor-cine {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 30rem) {
+    .card-imagenes {
+        flex-wrap: wrap;
+    }
+
+    .card-imagenes img {
+        margin: 0.625rem;
+    }
+}
+
+
